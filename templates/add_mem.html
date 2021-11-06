@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Дабавить мем</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/media.css">
+</head>
+<body>
+<section class="add_mem">
+    <div>
+        <h1>НОВЫЙ МЕМ</h1>
+        <form action="{% url 'add_memes' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+{#                {{ form. as_p }}#}
+                <p>Описание:</p>
+                <textarea name="description" id="" cols="30" rows="10">Какой-то тест</textarea>
+            </div>
+            <div>
+                <p>Выбрать мем:</p>
+                <label for="image-mem">Выберите файл</label>
+                <input type="file" id="image-mem" hidden name="photo" title="" accept="multipart/form-data">
+                <input type="text" name="user" value="{{ request.user.id }}" hidden>
+{#                <button>Выбрать</button>#}
+            </div>
+
+            <button>Загрузить</button>
+        </form>
+
+{#        {% if img_obj %}#}
+{#            <h3>Succesfully uploaded : {{ img_obj.description }}</h3>#}
+{#            <img src="{{ img_obj.photo.url }}" alt="">#}
+{#        {% endif %}#}
+    </div>
+</section>
+</body>
+</html>

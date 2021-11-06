@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/media.css">
+</head>
+<body>
+<section class="profile-block">
+    <img src="/static/image/profile.svg" alt="" class="profile-block-image-mobile">
+    <div>
+        <a href="{% url 'logout_user' %}" class="exit">Выйти</a>
+        <div>
+            <h1>Профиль</h1>
+            <div class="information">
+                <p>{{ user_profile.email }}</p>
+                <p>{{ user_profile.nickname }}</p>
+                <p>{{ user_profile.password }}</p>
+            </div>
+            <div class="buttons">
+                <a href="{% url 'add_memes' %}">Добавить мем</a>
+                <a href="{% url 'memes' %}">Поорать с мемов</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="mem">
+        <h4>Мемы:</h4>
+        <div>
+        {% if posted_by_user.count > 0 %}
+            {% for mem in posted_by_user %}
+                <div>
+                    <b>Описание: </b>
+                    <p>{{ mem.description }}</p>
+                </div>
+
+                <div class="mem-block-image">
+                    <img src="../media/{{ mem.photo }}" alt="" width="100%">
+                </div>
+            {% endfor %}
+        {% else %}
+            <div>
+                <b>Описание: </b>
+                <p>Пусто</p>
+            </div>
+
+            <div class="memes-container">
+                    <img src="../media/Boris_The_Animal.jpg" alt="" width="100%">
+            </div>
+        {% endif %}
+
+        </div>
+    </div>
+    <a href="{% url 'logout_user' %}" class="exit-mobile">Выйти</a>
+</section>
+</body>
+</html>

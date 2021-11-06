@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/media.css">
+</head>
+<body>
+<section class="registration-block">
+    <div>
+        <h1>Регистрация</h1>
+        <form action="{% url 'registration' %}" class="form" method="POST">
+            {% csrf_token %}
+            <label>
+                <input type="text" name="email" placeholder="Email">
+            </label>
+
+            <label>
+                <input type="text" name="nickname" placeholder="Ник">
+            </label>
+
+            <label>
+                <input type="password" name="password" placeholder="Пароль">
+            </label>
+            <a href="{% url 'authorization' %}">Войти</a>
+
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>

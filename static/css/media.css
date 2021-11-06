@@ -1,0 +1,201 @@
+@media (max-width: 650px) {
+    .main-menu h1 {
+        font-size: 36px;
+    }
+
+    .main-menu > div {
+        max-width: 90%;
+        gap: 18px;
+    }
+
+    .main-menu > div > div {
+        gap: 48px;
+        justify-content: center;
+    }
+
+    .image {
+        height: 300px;
+    }
+
+    .registration-block h1 {
+        font-size: 64px;
+    }
+
+    .registration-block {
+        background-image: url("/static/image/registration_mobile.svg");
+        background-position: top;
+    }
+
+    .registration-block > div {
+        align-self: end;
+        padding-bottom: 20px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .form input {
+        max-width: 270px;
+        font-size: 24px;
+    }
+
+    .authorization-block {
+        background-image: url("/static/image/authorization_mobile.svg");
+    }
+
+    .authorization-block h1 {
+        font-size: 64px;
+    }
+
+    .authorization-block > div {
+        align-self: start;
+        padding-top: 20px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .form {
+        gap: 30px;
+    }
+
+    .form button {
+        font-size: 30px;
+    }
+
+    .profile-block {
+        background-image: none;
+    }
+
+    .profile-block-image-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .profile-block > div > div > h1 {
+        font-size: 64px;
+    }
+
+    .profile-block .exit {
+        display: none;
+    }
+
+    .profile-block .information {
+        grid-gap: 45px;
+    }
+
+    .profile-block .information p {
+        width: 270px;
+        font-size: 24px;
+    }
+
+    .profile-block .buttons a {
+        font-size: 30px;
+        padding: 8px 20px;
+        width: 270px;
+        text-align: center;
+    }
+
+    .mem {
+        max-width: 90%;
+        padding: 80px 0;
+    }
+
+    .exit-mobile {
+        display: block;
+        margin: 0 auto 20px auto;
+        background: #6100FF;
+        border: none;
+        border-radius: 202px;
+        color: #FFFFFF;
+        font-family: 'Caveat', cursive;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        text-decoration: none;
+        padding: 8px 20px;
+        max-width: 270px;
+        text-align: center;
+    }
+
+    .mem h4 {
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .mem > div h4, .mem > div p {
+        font-size: 24px;
+    }
+
+    .mem-block-image {
+        width: 100%;
+        height: 167px;
+    }
+
+    .add_mem {
+        background-image: url("/static/image/background.svg");
+        background-position: center;
+        height: auto;
+    }
+
+    .add_mem > div {
+        max-width: 90%;
+        float: none;
+        margin: 0 auto;
+        padding: 50px 0 170px 0;
+    }
+
+    .add_mem h1 {
+        font-size: 64px;
+    }
+
+    .add_mem form {
+        max-width: 270px;
+        margin: 0 auto;
+    }
+
+    .add_mem form > div {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        grid-gap: 50px;
+    }
+
+    .add_mem form > div > p {
+        font-size: 48px;
+        justify-content: center;
+        color: black;
+    }
+
+    .add_mem form > div textarea {
+        width: calc(100% - 20px);
+    }
+
+    .memes {
+        max-width: 80%;
+        padding: 8px;
+        margin: 0 auto;
+    }
+
+    .memes > a {
+        font-size: 24px;
+    }
+
+    .memes > h1 {
+        font-size: 64px;
+    }
+
+    .mem-block {
+        background-color: transparent;
+    }
+    .memes .memes-container{
+        padding: 45px 0;
+        grid-gap: 55px;
+    }
+
+    .memes .memes-container .mem-block {
+        height: auto;
+    }
+
+    .memes .memes-container .mem-block > div {
+        font-size: 24px;
+    }
+}
