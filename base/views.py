@@ -53,22 +53,16 @@ def profile(request, id):
     if user_profile.id == request.user.id:
         posted_by_user = CollectionsMemes.objects.filter(user=id)
         return render(request, "profile.html", context=locals())
+    return redirect('home')
 
 
 @login_required()
 def add_memes(request):
-    all_memes = CollectionsMemes()
     if request.method == 'POST':
         form = ImageForm(request.POST, request.FILES)
         if form.is_valid():
             f = form.save(commit=False)
             if f.user.id == request.user.id:
-            # CollectionsMemes.objects.create(user=request.user, photo=request.FILES.get('photo'),
-            #                                 description=request.POST.get('description'))
-            # all_memes.user_id = Users.objects.filter(id=request.user.id)[0].id
-            # all_memes.photo = request.FILES.get('photo')
-            # all_memes.description = request.POST.get('description')
-            # all_memes.save()
                 f.save()
                 return redirect('memes')
     else:

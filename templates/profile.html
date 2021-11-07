@@ -40,18 +40,18 @@
                     <p>{{ mem.description }}</p>
                 </div>
 
-                <div class="mem-block-image">
+                <div class="mem-block">
                     <img src="../media/{{ mem.photo }}" alt="" width="100%">
                 </div>
             {% endfor %}
         {% else %}
             <div>
                 <b>Описание: </b>
-                <p>Пусто</p>
+                <p>Нету мемов (((</p>
             </div>
 
-            <div class="memes-container">
-                    <img src="../media/Boris_The_Animal.jpg" alt="" width="100%">
+            <div class="memes-container ">
+                    <img src="../media/default_mem.jpg" alt="" width="100%">
             </div>
         {% endif %}
 

@@ -138,7 +138,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #         'django.contrib.auth.backends.ModelBackend',
 #     )
 
-image = models.ImageField(upload_to='users/%Y/%m/%d/', blank=True)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

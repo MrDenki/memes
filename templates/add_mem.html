@@ -17,25 +17,18 @@
         <form action="{% url 'add_memes' %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div>
-{#                {{ form. as_p }}#}
                 <p>Описание:</p>
-                <textarea name="description" id="" cols="30" rows="10">Какой-то тест</textarea>
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
             </div>
             <div>
                 <p>Выбрать мем:</p>
                 <label for="image-mem">Выберите файл</label>
                 <input type="file" id="image-mem" hidden name="photo" title="" accept="multipart/form-data">
                 <input type="text" name="user" value="{{ request.user.id }}" hidden>
-{#                <button>Выбрать</button>#}
             </div>
 
             <button>Загрузить</button>
         </form>
-
-{#        {% if img_obj %}#}
-{#            <h3>Succesfully uploaded : {{ img_obj.description }}</h3>#}
-{#            <img src="{{ img_obj.photo.url }}" alt="">#}
-{#        {% endif %}#}
     </div>
 </section>
 </body>

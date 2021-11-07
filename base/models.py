@@ -11,5 +11,5 @@ class Users(models.Model):
 
 class CollectionsMemes(models.Model):
     description = models.CharField(max_length=250, null=True, blank=True, verbose_name="Описание мема")
-    photo = models.ImageField(upload_to='users/%Y/%m/%d/')
+    photo = models.ImageField(upload_to=f'users/%Y/%m/%d/')
     user = models.ForeignKey(Users, null=False, blank=False, on_delete=models.CASCADE, verbose_name="Автор мема", related_name='users')
